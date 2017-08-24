@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>my project show</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="./node_modules/swiper/dist/css/swiper.min.css">
+    <style media="screen">
+    .title {
+      text-align: center;
+    }
+    .swiper-container {
+      width: 100%;
+      padding-top: 10px;
+      padding-bottom: 50px;
+    }
+
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 500px;
+      height: 500px;
+    }
+
+    /*slider 的标题*/
+    .slide-title {
+      text-align: center;
+    }
+    /*上面图片显示块*/
+    .slide-img {
+      position: relative;
+      width: 100%;
+      height: 350px;
+      text-align: center;
+    }
+    .slide-img img {
+      width: 400px;
+      height: 350px;
+    }
+
+    .link {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 10;
+    }
+
+    /*下面项目详情块*/
+    .slide-detail {
+      border: 1px solid red;
+
+    }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">梁文冲个人项目展</h1>
+    <!-- Slider main container -->
+    <div class="swiper-container">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+          <!-- Slides -->
+        <div class="swiper-slide">
+          <div class="slide-title">
+            <h4>cnode社区移动端</h4>
+          </div>
+          <div class="slide-img">
+            <img src="img/cnode.png"/>
+            <a class="link" href="https://lwcreber.github.io/cnode_vue/"></a>
+          </div>
+          <div class="slide-detail">
+            1
+          </div>
+        </div>
+        <div class="swiper-slide" >
+          <div class="slide-title">
+            <h4>青蛙过河游戏</h4>
+          </div>
+          <div class="slide-img">
+            <img src="img/froggerGame.png"/>
+            <a class="link" href="https://lwcreber.github.io/Udacity_Frogger/"></a>
+          </div>
+          <div class="slide-detail">
+            2
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="slide-title">
+            <h4>网站优化项目</h4>
+          </div>
+          <div class="slide-img">
+            <img src="img/websiteOpt.png"/>
+            <a class="link" href="https://lwcreber.github.io/Website_Optimization/"></a>
+          </div>
+          <div class="slide-detail">
+            3
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="slide-title">
+            <h4>街区地图</h4>
+          </div>
+          <div class="slide-img">
+            <img src="img/map.png"/>
+            <a class="link" href="https://github.com/LwcReber/Map_APP"></a>
+          </div>
+          <div class="slide-detail">
+            4
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="slide-title">
+            <h4>健康记录应用</h4>
+          </div>
+          <div class="slide-img">
+            <img src="img/health.png"/>
+            <a class="link" href="https://lwcreber.github.io/health_Tracker/"></a>
+          </div>
+          <div class="slide-detail">
+            5
+          </div>
+        </div>
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+    <script src="./node_modules/jquery/dist/jquery.min.js" charset="utf-8"></script>
+    <script src="./node_modules/swiper/dist/js/swiper.jquery.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      var galleryTop = new Swiper ('.swiper-container', {
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        pagination: '.swiper-pagination',
+        autoplay: 2000,
+        loop: true,
+        effect: 'coverflow',
+        grabCursor: true, // 有拉动切换不需要pagination点击
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflow: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows : true
+        }
+      })
+       // 鼠标悬停暂停播放
+       $('.swiper-container').mouseover(function() {
+         // 暂停播放
+        //  galleryTop.stopAutoplay();
+       }) // 鼠标离开开始播放
+       .mouseleave(function() {
+         // 开启播放
+        //  galleryTop.startAutoplay();
+       })
+    </script>
+  </body>
+</html>
