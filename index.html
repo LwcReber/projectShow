@@ -6,11 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="./node_modules/swiper/dist/css/swiper.min.css">
     <style media="screen">
+    ul {
+      padding: 0;
+      margin: 0;
+    }
     .title {
+      position: relative;
       text-align: center;
+      z-index: 1;
     }
     .swiper-container {
-      width: 100%;
+      width: 98%;
       padding-top: 10px;
       padding-bottom: 50px;
     }
@@ -19,7 +25,7 @@
       background-position: center;
       background-size: cover;
       width: 500px;
-      height: 500px;
+      height: 550px;
     }
 
     /*slider 的标题*/
@@ -49,8 +55,52 @@
 
     /*下面项目详情块*/
     .slide-detail {
-      border: 1px solid red;
+      margin-top: 10px;
+      /*border: 1px solid red;*/
+    }
 
+    /*个人信息块*/
+    .person {
+      position: relative;
+      width: 90%;
+      margin: auto;
+      z-index: 1;
+    }
+    /*标题*/
+    .person-title {
+      text-align: center;
+    }
+    .person-content ul {
+      list-style: none;
+      margin-bottom: 15px;
+    }
+    .person-content ul:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    .person-content li {
+      float: left;
+      width: 25%;
+      margin-top: 20px;
+    }
+     /*求职意向特别处理*/
+    #profession {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    /*信息块底部*/
+    .person-footer {
+      margin-top: 50px;
+    }
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 0;
     }
     </style>
   </head>
@@ -63,14 +113,19 @@
           <!-- Slides -->
         <div class="swiper-slide">
           <div class="slide-title">
-            <h4>cnode社区移动端</h4>
+            <h4>cnode社区移动端--Vue版</h4>
           </div>
           <div class="slide-img">
             <img src="img/cnode.png"/>
-            <a class="link" href="https://lwcreber.github.io/cnode_vue/"></a>
+            <a class="link" href="https://lwcreber.github.io/cnode_vue/" target="_blank"></a>
           </div>
           <div class="slide-detail">
-            1
+            利用conde社区网站提供的API,使用vue 2.0框架,使用vue-cli搭建项目，
+            技术栈：vue 2.0 + vue-router + webpack + ES6 + sass。
+            <div class="">
+              Angular 版请点击这里
+              <a href="https://lwcreber.github.io/cnode_gulp/" target="_blank">Angular版</a>
+            </div>
           </div>
         </div>
         <div class="swiper-slide" >
@@ -79,22 +134,27 @@
           </div>
           <div class="slide-img">
             <img src="img/froggerGame.png"/>
-            <a class="link" href="https://lwcreber.github.io/Udacity_Frogger/"></a>
+            <a class="link" href="https://lwcreber.github.io/Udacity_Frogger/" target="_blank"></a>
           </div>
           <div class="slide-detail">
-            2
+            使用HTML5的Canvas绘制所有的游戏元素，使用JavaScript的面向对象对玩家类和虫子类进行编写，
+            使用requestAnimationFrame来调用游戏的循环函数，使应用的运行速度尽可能达到 60帧每秒
           </div>
         </div>
         <div class="swiper-slide">
           <div class="slide-title">
-            <h4>网站优化项目</h4>
+            <h4>网站性能优化项目</h4>
           </div>
           <div class="slide-img">
             <img src="img/websiteOpt.png"/>
-            <a class="link" href="https://lwcreber.github.io/Website_Optimization/"></a>
+            <a class="link" href="https://lwcreber.github.io/Website_Optimization/" target="_blank"></a>
           </div>
           <div class="slide-detail">
-            3
+            项目主要针对加载、动画、响应过程进行了优化
+            使用gulp工具压缩html、css、js等文件，
+            使用pageSpeed Insights 测试达到90分，
+            使用Chrome的performance检查pizza.html的性能问题，
+            优化后pizza.html滚动时保持60fps 的帧速
           </div>
         </div>
         <div class="swiper-slide">
@@ -103,10 +163,14 @@
           </div>
           <div class="slide-img">
             <img src="img/map.png"/>
-            <a class="link" href="https://github.com/LwcReber/Map_APP"></a>
+            <a class="link" href="https://github.com/LwcReber/Map_APP" target="_blank"></a>
           </div>
           <div class="slide-detail">
-            4
+            使用 gulp 工具构建该项目，使用 eslint 对js进行检测，
+            修改成符合eslint格式的代码。使用框架：knockout JS,
+            使用google map API 完成地图显示和地图控件功能、
+            使用ajax对高德地图API进行请求获取地点的详细信息。<br>
+            地图api提供的是http协议，gitpage是https协议，协议不同，所以不放到gitpage上了
           </div>
         </div>
         <div class="swiper-slide">
@@ -115,10 +179,13 @@
           </div>
           <div class="slide-img">
             <img src="img/health.png"/>
-            <a class="link" href="https://lwcreber.github.io/health_Tracker/"></a>
+            <a class="link" href="https://lwcreber.github.io/health_Tracker/" target="_blank"></a>
           </div>
           <div class="slide-detail">
-            5
+            使用 gulp 工具构建，使用框架 backbone JS，
+            使用ajax请求Nutritionix API 查询对应的食物卡路里。
+            查询成功将返回该类食物的不同卡路里数，
+            选择食物后，将把食物添加到卡路里计算列表中，同时使用localStorage保存食物数据。
           </div>
         </div>
       </div>
@@ -129,14 +196,43 @@
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
     </div>
+
+    <div class="person">
+      <h2 class="person-title">个人信息</h2>
+      <div class="person-content">
+        <ul class="">
+          <li>姓名：<b>梁文冲</b></li>
+          <li>籍贯：广东茂名</li>
+          <li>电话：13760471392</span></li>
+          <li>邮箱地址：13760471392@163.com</li>
+          <li>毕业院校：深圳职业技术学院</li>
+          <li>学历：大专</span></li>
+          <li><a href="https://github.com/LwcReber" target="_blank">个人github链接</a></li>
+          <li>求职意向： <span id="profession">前端开发</span></li>
+        </ul>
+      </div>
+      <div class="person-footer">
+        <div class="footer-content">
+          详细信息请点击
+          <a href="#" target="_blank">这里</a>
+        </div>
+      </div>
+    </div>
     <script src="./node_modules/jquery/dist/jquery.min.js" charset="utf-8"></script>
     <script src="./node_modules/swiper/dist/js/swiper.jquery.min.js" charset="utf-8"></script>
+    <script src="lib/three.min.js"></script>
+
+    <script src="lib/Projector.js"></script>
+    <script src="lib/CanvasRenderer.js"></script>
+    <!-- 屏蔽性能插件 -->
+    <!-- <script src="lib/stats.min.js"></script> -->
+    <script src="js/bg.js" charset="utf-8"></script>
     <script type="text/javascript">
       var galleryTop = new Swiper ('.swiper-container', {
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
         pagination: '.swiper-pagination',
-        autoplay: 2000,
+        autoplay: 2300,
         loop: true,
         effect: 'coverflow',
         grabCursor: true, // 有拉动切换不需要pagination点击
@@ -153,11 +249,11 @@
        // 鼠标悬停暂停播放
        $('.swiper-container').mouseover(function() {
          // 暂停播放
-        //  galleryTop.stopAutoplay();
+         galleryTop.stopAutoplay();
        }) // 鼠标离开开始播放
        .mouseleave(function() {
          // 开启播放
-        //  galleryTop.startAutoplay();
+         galleryTop.startAutoplay();
        })
     </script>
   </body>
