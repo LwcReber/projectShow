@@ -11,6 +11,7 @@
     }
     .swiper-slide {
       width: 90%;
+
       height: 510px;
     }
     .slide-img {
@@ -20,10 +21,16 @@
     .slide-img img {
       height: 100%;
     }
+
     .person-content li {
       margin-top: 10px;
     }
     .person-title, #email {
       display: none;
     }
+
+    .person-content ul {
+      left: 50px;
+    }
+
   }

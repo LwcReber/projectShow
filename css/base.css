@@ -1,11 +1,15 @@
 body {
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 ul {
   padding: 0;
   margin: 0;
+}
+h3, h4 {
+  margin: 0px;
+  padding: 10px;
 }
 .title {
   position: relative;
@@ -14,15 +18,16 @@ ul {
 }
 .swiper-container {
   width: 98%;
+  /*height: 30%;*/
   padding-top: 10px;
-  padding-bottom: 50px;
+  padding-bottom: 40px;
 }
 
 .swiper-slide {
   background-position: center;
   background-size: cover;
   width: 500px;
-  height: 600px;
+  height: 550px;
 }
 .swiper-slide-active {
   background-color: rgba(200,200,200, 0.5);
@@ -37,12 +42,12 @@ ul {
   .slide-img {
     position: relative;
     width: 100%;
-    height: 350px;
+    height: 60%;
     text-align: center;
   }
   .slide-img img {
     width: 80%;
-    height: 350px;
+    height: 100%;
   }
 
   .link {
@@ -57,7 +62,7 @@ ul {
   /*下面项目详情块*/
   .slide-detail {
     /*margin-top: 10px;*/
-    padding: 10px;
+    padding: 0 10px;
   }
 
   /*个人信息块*/
@@ -73,9 +78,14 @@ ul {
   }
   /*标题*/
   .person-title {
+    position: absolute;
+    left: 150px;
+    top: 10px;
     text-align: center;
   }
   .person-content ul {
+    position: absolute;
+    left: 220px;
     list-style: none;
     margin-bottom: 15px;
   }
@@ -87,6 +97,7 @@ ul {
   .person-content li {
     float: left;
     width: 50%;
+    height: 50%;
     margin-top: 20px;
     text-align: center;
   }
@@ -109,7 +120,7 @@ ul {
 
   /*背景canvas*/
   canvas {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
